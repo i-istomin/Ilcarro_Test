@@ -14,8 +14,6 @@ public class Login extends MainTests {
         WebElement loginItem = wd.findElement(By.cssSelector("[href='/login?url=%2Fsearch']"));
         loginItem.click();
 
-
-
         //2. fill email
         WebElement emailInput=wd.findElement(By.xpath("//input[@id='email']"));
         emailInput.click();
@@ -31,9 +29,11 @@ public class Login extends MainTests {
 
         //4.click button yalla
         wd.findElement(By.xpath("//button[contains(text(),'Y’alla!')]")).click();
+        //esli mi sobiraemsia sdelat tolko odno deystview kak najat na knopku "login", to nam ne obazatelno zayavliat WEbElement
+        //nam ne nujen eshe odin element i nichego s nim delat
+
 
         //5. click button "ok"
-        // wd.findElement(By.xpath("//button[normalize-space()='Ok']")).click();
         wd.findElement(By.xpath("//*[@type='button']")).click();
 
 
