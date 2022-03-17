@@ -23,9 +23,6 @@ public class ApplicationManager {
         wd.quit();
      //If there are one or more browser windows open, it will close all the open browser windows
 
-        //Explanation use case quit(): close():- Suppose you have opened multiple browser windows with same driver instance,
-        // now calling close() on the driver instance will close the current window the driver instance is pointed to.
-        // But the driver instance still remain in memory and can be used to handle other open browser windows.
         //************************************
         //Explanation use case quit(): You should use driver.quit whenever you want to end the program.
         // It will close all opened browser windows and terminates the WebDriver session.

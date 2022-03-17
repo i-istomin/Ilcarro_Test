@@ -26,11 +26,14 @@ public class UserHelper extends HelperBase {
         click(By.xpath("//*[@type='button']"));
     }
 
-    public boolean isLoginSuccess() {
+    public boolean isLoginRegistrationSuccess() {
 
-     //   return isElementPresent(By.xpath("//*[text()=' Logout ']"));
-        return isElementPresent(By.xpath("//*[contains(text(),' Logout ']"));
+        return isElementPresent(By.xpath("//*[text()=' Logout ']"));
+      //  return isElementPresent(By.xpath("//*[contains(text(),' Logout ']"));
 
     }
 
+    public void submitRegistration() {
+        click(By.xpath("//*[@class='navigator']"));
+    }
 }

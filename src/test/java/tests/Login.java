@@ -1,8 +1,6 @@
 package tests;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -53,7 +51,7 @@ public class Login extends MainTests {
         //4. click button "ok"
         app.getUserHelper().confirmLogin();
         //Assert
-        Assert.assertTrue(app.getUserHelper().isLoginSuccess());
+        Assert.assertTrue(app.getUserHelper().isLoginRegistrationSuccess());
 
 
 
