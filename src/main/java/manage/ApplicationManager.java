@@ -20,7 +20,7 @@ public class ApplicationManager {
     }
 
     public void stop() {
-        wd.quit();
+       // wd.quit();
      //If there are one or more browser windows open, it will close all the open browser windows
 
         //************************************

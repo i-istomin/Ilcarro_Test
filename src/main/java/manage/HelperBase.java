@@ -26,4 +26,13 @@ public class HelperBase {
     public boolean isElementPresent(By locator) {//vajno chtob mne vernuli true/false
         return wd.findElements(locator).size() > 0;
     }
+
+public void pause(int millis){
+    try {
+        Thread.sleep(millis); //metod sleep trebuet brosit exception ili try catch
+        //lucheshe try catch, potomu chto exception mi doljni budem dobavit vezde v proekte
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}
 }
