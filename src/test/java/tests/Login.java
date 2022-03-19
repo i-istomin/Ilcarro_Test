@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 
 public class Login extends MainTests {
 
-    @Test
-    public void loginSuccess() {
+ //   @Test
+//    public void loginSuccess() {
         // 1. click the  login
 //        WebElement loginItem = wd.findElement(By.cssSelector("[href='/login?url=%2Fsearch']"));
 //        loginItem.click();
@@ -40,47 +40,38 @@ public class Login extends MainTests {
 //        //Assert
 //       // Assert.assertTrue(wd.findElements(By.xpath("//*[@href='/logout?url=%2Fsearch']")).size()>0);
 //        Assert.assertTrue(wd.findElements(By.xpath("//*[text()=' Logout ']")).size() > 0);
-    }
+ //   }
 
     @BeforeMethod
     public void precondition() { //is login?->log out
-        if (app.getUserHelper().iLogOutPresent()){
+        if (app.getUserHelper().isLogOutPresent()){
             app.getUserHelper().logout();
         }
-
     }
 
 
     @Test
     public void loginSuccessNew() {
         // 1. click the  login regist form
-        app.getUserHelper().openLoginRegistrationForm();
+        app.getUserHelper().openLoginForm();
         //2. fill email +type the #password
-        app.getUserHelper().fillLoginRegistrationForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
+        app.getUserHelper().fillLoginForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
         //3.click button yalla:
         app.getUserHelper().submit();
         //4 make pause before
         app.getUserHelper().pause(1000);
-
         //5. assert if it is true or false contact when success pop up opened
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
-
-        //6. click button "ok"
-        app.getUserHelper().confirmLogin();
-        //7.Assert
-       // Assert.assertTrue(app.getUserHelper().isLoginRegistrationSuccess());
     }
 
     @Test
     public void loginSuccessNew1() {
 
-        app.getUserHelper().openLoginRegistrationForm();
-        app.getUserHelper().fillLoginRegistrationForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
+        app.getUserHelper().openLoginForm();
+        app.getUserHelper().fillLoginForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
         app.getUserHelper().submit();
         app.getUserHelper().pause(1000);
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
-        app.getUserHelper().confirmLogin();
-       // Assert.assertTrue(app.getUserHelper().isLoginRegistrationSuccess());
     }
 
     @AfterMethod

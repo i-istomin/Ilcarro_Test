@@ -19,6 +19,7 @@ public class HelperBase {
             element.sendKeys(text);
         }
     }
+
     public void click(By locator) {
         wd.findElement(locator).click();
     }
@@ -27,12 +28,12 @@ public class HelperBase {
         return wd.findElements(locator).size() > 0;
     }
 
-public void pause(int millis){
-    try {
-        Thread.sleep(millis); //metod sleep trebuet brosit exception ili try catch
-        //lucheshe try catch, potomu chto exception mi doljni budem dobavit vezde v proekte
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis); //metod sleep trebuet brosit exception ili try catch
+            //lucheshe try catch, potomu chto exception mi doljni budem dobavit vezde v proekte
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-}
 }

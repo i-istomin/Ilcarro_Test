@@ -13,7 +13,6 @@ public class MainTests {
 
    // @BeforeMethod//method dlia kajdogo opredelennogo testa
     @BeforeSuite // metod dlia vseh testov srazu
-
     public void setUp() { //browser+https
         app.init();
     }
