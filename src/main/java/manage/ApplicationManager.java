@@ -14,7 +14,7 @@ public class ApplicationManager {
         wd = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver");
         wd.manage().window().maximize();
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.navigate().to("https://ilcarro.xyz/search");
         userHelper=new UserHelper(wd);
     }

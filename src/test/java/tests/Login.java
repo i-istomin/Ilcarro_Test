@@ -1,6 +1,7 @@
 package tests;
 
 
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -69,6 +70,18 @@ public class Login extends MainTests {
 
         app.getUserHelper().openLoginForm();
         app.getUserHelper().fillLoginForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
+        app.getUserHelper().submit();
+        app.getUserHelper().pause(1000);
+        Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
+    }
+
+    @Test
+    public void loginSuccessModel() {
+        User user=new User().withEmail("missira85@gmail.com").withPassword("Irinka777$");
+
+
+        app.getUserHelper().openLoginForm();
+        app.getUserHelper().fillLoginForm(user);//vpisivaem suda user. no metod rugaetsia.
         app.getUserHelper().submit();
         app.getUserHelper().pause(1000);
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");

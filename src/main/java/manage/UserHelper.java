@@ -1,10 +1,13 @@
 package manage;
 
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserHelper extends HelperBase {
     public UserHelper(WebDriver wd) {
@@ -17,9 +20,15 @@ public class UserHelper extends HelperBase {
     }
 
     //2. fill email +type the #password
-    public void fillLoginForm(String email, String password) {
+    public void fillLoginForm(String email, String password) { //delaem copy paste
         type(By.xpath("//input[@id='email']"), email); //type(By.id("email"),email);
         type(By.xpath("//input[@id='password']"), password); //type(By.id("password"),password);
+    }
+
+    public void fillLoginForm(User user) {
+        type(By.id("email"), user.getEmail()); //type(By.id("email"),email);
+        type(By.id("password"), user.getPassword()); //type(By.id("password"),password);
+
     }
 
     //3.click button yalla:
@@ -29,6 +38,8 @@ public class UserHelper extends HelperBase {
 
     //4. assert if it is true or false contact when success pop up opened
     public String checkMessage() {
+        new WebDriverWait(wd,5).until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".dialog-container"))));
+              //webdriver budet jdat max 5 sec opredelenniy element
         String message = wd.findElement(By.cssSelector(".dialog-container h2")).getText();
         System.out.println(message);
         return message;
@@ -36,8 +47,11 @@ public class UserHelper extends HelperBase {
 
     //4. submit/click button "ok"
     public void confirmLogin() {
-       // click(By.xpath("//button[text()='Ok']"));
-        click(By.xpath("//*[@type='button']"));
+        if (isElementPresent(By.xpath("//button[text()='Ok']"))){
+            click(By.xpath("//button[text()='Ok']"));  //click(By.xpath("//*[@type='button']"));
+
+        }
+
 
     }
 
@@ -64,6 +78,13 @@ public class UserHelper extends HelperBase {
         type(By.id("password"), password);
     }
 
+    public void fillRegistrationForm(User user) {
+        type(By.id("name"), user.getName());
+        type(By.id("lastName"), user.getLastNAme());
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
+    }
+
     public void checkPolicyXY() {
         WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']")); //nahodim snachala webelement
         //label.getRect();//alt+enter+inroduce
@@ -75,5 +96,31 @@ public class UserHelper extends HelperBase {
         actions.moveToElement(label).release().perform();//navodim mishkoy, no ne klikaem
         actions.moveByOffset(-offSetX, -offSetY).click().release().perform();//na kakie koordinati navesti mishku, kogda on navedet na tu tochku kot-ya menia ustraivaet, govorim click
 
+    }
+
+    public boolean isErrorPasswordDisplayedSize() {
+        //Password must contain minimum 8 symbols  div.error div:first-child
+        //Password must contain 1 uppercase letter, 1 lowercase letter and one number  div.error div:last-child
+        Boolean firstChild = new WebDriverWait(wd, 5).until(ExpectedConditions
+                .textToBePresentInElement
+                        (wd.findElement(By.cssSelector("div.error div:first-child")), "Password must contain minimum 8 symbols"));
+        return firstChild;
+    }
+     public boolean  isErrorPasswordFormat(){
+        Boolean lastChild =new WebDriverWait(wd,5).until(ExpectedConditions
+                .textToBePresentInElement
+                        (wd.findElement(By.cssSelector("div.error div:last-child")),"Password must contain 1 uppercase letter, 1 lowercase letter and one number"));
+      return lastChild;
+
+    }
+
+    public boolean isYallaButtonNotActive() {
+        return wd.findElement(By.cssSelector("[type='submit']")).isEnabled();
+
+    }
+
+    public boolean isButtonClickable() {
+        return isElementPresent(By.cssSelector("button[disabled]")); //when button id disabled, so our test passed because we are waiting for inactive button
+        //we are waiting for true when this button doesn't cklickable
     }
 }
