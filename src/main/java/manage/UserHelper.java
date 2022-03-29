@@ -26,15 +26,15 @@ public class UserHelper extends HelperBase {
     }
 
     public void fillLoginForm(User user) {
-        type(By.id("email"), user.getEmail()); //type(By.id("email"),email);
-        type(By.id("password"), user.getPassword()); //type(By.id("password"),password);
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
 
     }
 
-    //3.click button yalla:
-    public void submit() {
-        click(By.xpath("//button[@type='submit']")); //click(By.xpath("//button[contains(text(),'Y’alla!')]"));
-    }
+//    //3.click button yalla:
+//    public void submit() {
+//        click(By.xpath("//button[@type='submit']")); //click(By.xpath("//button[contains(text(),'Y’alla!')]"));
+//    }
 
     //4. assert if it is true or false contact when success pop up opened
     public String checkMessage() {
@@ -122,5 +122,12 @@ public class UserHelper extends HelperBase {
     public boolean isButtonClickable() {
         return isElementPresent(By.cssSelector("button[disabled]")); //when button id disabled, so our test passed because we are waiting for inactive button
         //we are waiting for true when this button doesn't cklickable
+    }
+
+    public void login(User user) {//soberem vse shagi chtoby sdelat login
+        openLoginForm();
+        fillLoginForm(user);
+        submit();
+        confirmLogin();
     }
 }

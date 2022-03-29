@@ -1,5 +1,6 @@
 package manage;
 
+import models.Car;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,6 +10,7 @@ public class ApplicationManager {
 
     WebDriver wd;
     UserHelper userHelper;
+    CarHelper car;
 
     public void init() {
         wd = new ChromeDriver();
@@ -16,7 +18,9 @@ public class ApplicationManager {
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.navigate().to("https://ilcarro.xyz/search");
+
         userHelper=new UserHelper(wd);
+        car=new CarHelper(wd);
     }
 
     public void stop() {
@@ -35,5 +39,9 @@ public class ApplicationManager {
 
     public UserHelper getUserHelper() {
         return userHelper;
+    }
+
+    public CarHelper getCar() {
+        return car;
     }
 }
