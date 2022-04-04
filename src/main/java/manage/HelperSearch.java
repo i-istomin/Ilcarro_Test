@@ -49,7 +49,6 @@ public class HelperSearch extends HelperBase {
 
 
     private void typeCity1(String city) {
-
         type(By.id("city"), city);//pechataem slovo v inpute
         click(By.cssSelector(".pac-item"));//otkrivaetsia dropdown
         pause(500);
