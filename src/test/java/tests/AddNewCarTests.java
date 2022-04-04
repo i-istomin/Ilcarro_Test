@@ -10,12 +10,11 @@ import org.testng.annotations.Test;
 public class AddNewCarTests extends MainTests {
 
     @BeforeMethod
-    public void preCondition(){//if login button display, so make login
-        if (!app.getUserHelper().isLogOutPresent()){
+    public void preCondition() {//if login button display, so make login
+        if (!app.getUserHelper().isLogOutPresent()) {
             app.getUserHelper().login(new User().withEmail("missira85@gmail.com").withPassword("Irinka777$"));
         }
     }
-
 
 
     @Test
@@ -44,10 +43,9 @@ public class AddNewCarTests extends MainTests {
 
         app.getCar().openCarForm();
         app.getCar().fillCarForm(car);//peredali obyekt car ko-e sozdali reanee
-      app.getCar().attachPhoto("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png");//daem ssilku na foto
+        app.getCar().attachPhoto("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png");//daem ssilku na foto
         app.getCar().submit();
         Assert.assertTrue(app.getCar().isCarAdded());
-
 
 
     }
