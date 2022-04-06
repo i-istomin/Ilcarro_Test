@@ -41,9 +41,14 @@ public class HelperBase {
 
     //3.click button yalla:---> vziali etot metot iz userhelper
     public void submit() {
-       // click(By.xpath("//button[@type='submit']")); //click(By.xpath("//button[contains(text(),'Y’alla!')]"));
-        new WebDriverWait(wd,10)
+        // click(By.xpath("//button[@type='submit']")); //click(By.xpath("//button[contains(text(),'Y’alla!')]"));
+        new WebDriverWait(wd, 10)
                 .until(ExpectedConditions.elementToBeClickable(wd.findElement(By.cssSelector("[type='submit']"))));
+        click(By.cssSelector("[type='submit']"));
+    }
+
+    public void submitWithoutWait() {
+
         click(By.cssSelector("[type='submit']"));
     }
 }

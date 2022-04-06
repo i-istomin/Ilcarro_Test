@@ -55,10 +55,10 @@ public class RegistrationTest extends MainTests {
         app.getUserHelper().openRegistrationForm();//open regform
         app.getUserHelper().fillRegistrationForm(user);
         app.getUserHelper().checkPolicyXY();
-        app.getUserHelper().submit(); //not click registration, because we don't need it
+      //  app.getUserHelper().submit(); //not click registration, because we don't need it
 
         Assert.assertTrue(app.getUserHelper().isErrorPasswordDisplayedSize());
-        Assert.assertTrue(app.getUserHelper().isErrorPasswordFormat());//check if button "yalla" not cklickable
+       Assert.assertTrue(app.getUserHelper().isErrorPasswordFormat());//check if button "yalla" not cklickable
         Assert.assertFalse(app.getUserHelper().isYallaButtonNotActive());
         Assert.assertTrue(app.getUserHelper().isButtonClickable());
 
