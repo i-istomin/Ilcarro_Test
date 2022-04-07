@@ -38,7 +38,7 @@ public class UserHelper extends HelperBase {
 
     //4. assert if it is true or false contact when success pop up opened
     public String checkMessage() {
-        new WebDriverWait(wd,5).until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".dialog-container"))));
+        new WebDriverWait(wd,10).until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".dialog-container"))));
               //webdriver budet jdat max 5 sec opredelenniy element
         String message = wd.findElement(By.cssSelector(".dialog-container h2")).getText();
         System.out.println(message);

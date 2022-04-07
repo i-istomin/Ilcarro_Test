@@ -13,13 +13,16 @@ public class HelperSearch extends HelperBase {
     }
 
     public void searchCurrentMonth(String city, String dataFrom, String dataTo) {
+        pause(500);
         typeCity(city);//pechataem slovo v inpute
         selectPeriod(dataFrom, dataTo);
 
     }
 
     private void typeCity(String city) {
+
         type(By.id("city"), city);//pechataem slovo v inpute
+        pause(500);
         click(By.cssSelector(".pac-item"));//otkrivaetsia dropdown
         pause(500);
 
@@ -56,7 +59,9 @@ public class HelperSearch extends HelperBase {
 
 
     public void searchCurrentMonthInPast(String city, String dataFrom, String dataTo) {
+
         typeCity(city);//pechataem slovo v inpute
+        pause(500);
         typePeriodInPast(dataFrom, dataTo);
 
     }
@@ -128,6 +133,7 @@ public class HelperSearch extends HelperBase {
 
         click(By.xpath(locator));
 
+
     }
 
     private void selectPeriodAnyData2(String dataFrom, String dataTo) {
@@ -180,6 +186,24 @@ public class HelperSearch extends HelperBase {
         String error = el.getText();
         System.out.println(error);
         return error.equals("You can't pick date before today");
+    }
+
+    public void cklickSearch() {
+        click(By.id("0"));
+
+    }
+
+    public void deleteFieldCity() {
+        click(By.id("city"));
+        //wd.findElement(By.id("city")).sendKeys("\b\b\b\b\b\b\b\b\b\b\b\b\b");//Tel Aviv-Yafo
+        wd.findElement(By.id("city")).clear();
+
+    }
+
+    public void deleteFieldDate() {
+
+        click(By.id("dates"));
+        wd.findElement(By.id("dates")).clear();
     }
 }
 
