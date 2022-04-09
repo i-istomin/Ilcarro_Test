@@ -47,12 +47,18 @@ public class Login extends MainTests {
     public void precondition() { //is login?->log out
         if (app.getUserHelper().isLogOutPresent()){
             app.getUserHelper().logout();
+            logger.info("Test needs logout");
+
         }
     }
 
 
     @Test
     public void loginSuccessNew() {
+
+        // 0. otslejivaem s kakoy datou ya loginus
+        logger.info("Start test 'loginSuccessNew' ");
+        logger.info("The test starts with data [missira85@gmail.com] & [Irinka777$]");
         // 1. click the  login regist form
         app.getUserHelper().openLoginForm();
         //2. fill email +type the #password
@@ -63,6 +69,8 @@ public class Login extends MainTests {
         app.getUserHelper().pause(1000);
         //5. assert if it is true or false contact when success pop up opened
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
+        //6. pishem chto test proshel i ne upal
+        logger.info("Test 'loginSuccessNew' passed");
     }
 
     @Test

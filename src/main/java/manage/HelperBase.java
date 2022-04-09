@@ -1,10 +1,11 @@
 package manage;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.nio.file.Files;
 
 public class HelperBase {
     WebDriver wd;
@@ -50,5 +51,11 @@ public class HelperBase {
     public void submitWithoutWait() {
 
         click(By.cssSelector("[type='submit']"));
+    }
+    public void takeScreenShot(String  pathToFile){
+       File tmp= ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
+       File screenshot=new File(pathToFile);
+
+       // Files.copy(tmp,)
     }
 }

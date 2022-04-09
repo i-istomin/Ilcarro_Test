@@ -1,6 +1,7 @@
 package manage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -27,8 +28,6 @@ public class HelperSearch extends HelperBase {
         pause(500);
 
     }
-
-
 
 
     private void selectPeriod(String dataFrom, String dataTo) {//"04/10/2022", "04/20/2022"
@@ -75,17 +74,33 @@ public class HelperSearch extends HelperBase {
     }
 
     private void typePeriodInPast(String dataFrom, String dataTo) {
+        WebElement el = wd.findElement(By.id("dates"));
+
+        //-------------------------
+        //os?
+// delaem obiazatelno proverku na operazionnuyu sistemu, chtobi tochno prohodili kommandi
+        //t.k. v kajdoy sisteme raznie i chtobi testi prohodili na vseh sistemah
+        String osname=System.getProperty("os.name");
+        if (osname.startsWith("linux")) {
+            System.out.println(osname);
+
+            el.sendKeys(Keys.COMMAND, "a");// ctrl+a -> napisali kommandu chtobi ves text u nas bil mesuman
+        }else {
+            el.sendKeys(Keys.CONTROL, "a");
+        }
+            el.sendKeys(Keys.DELETE);// teper vse viterli s polia
+            pause(2000);
 
         click(By.id("dates"));
         click(By.cssSelector(".cdk-overlay-container"));
-        type(By.id("dates"),dataFrom + " - "+dataTo); // type(By.id("dates"), "4/01/2022" + "-" + "4/20/2022");
+        type(By.id("dates"), dataFrom + " - " + dataTo); // type(By.id("dates"), "4/01/2022" + "-" + "4/20/2022");
         click(By.cssSelector(".cdk-overlay-container"));
 
 
     }
 
     public boolean isDatesAreRequired() {
-               return isElementPresent(By.cssSelector("div[class='ng-star-inserted']"));
+        return isElementPresent(By.cssSelector("div[class='ng-star-inserted']"));
 
     }
 
@@ -107,15 +122,15 @@ public class HelperSearch extends HelperBase {
         int diffYear;// nujno vsegda znat esli est raniza mejdu godami
         int diffMonth; // nujno vsegda znat esli est raniza mejdu mesiazami
 
-        diffYear = from.getYear()- now.getYear();// god nineshniy proveriaem s tem chto najali
+        diffYear = from.getYear() - now.getYear();// god nineshniy proveriaem s tem chto najali
         if (diffYear == 0) {//esli tam lejit 0, to mi vnujnom godu
             diffMonth = from.getMonthValue() - now.getMonthValue();//to budem schitat raznizu mejdu mesiazami
         } else {//no esli mi ne v nuhnom godu
-            diffMonth =12- now.getMonthValue() +from.getMonthValue();
+            diffMonth = 12 - now.getMonthValue() + from.getMonthValue();
         }
         clickByNextMonth(diffMonth);
 
-        String locator = String.format("//div[text()=' %s ']",from.getDayOfMonth());
+        String locator = String.format("//div[text()=' %s ']", from.getDayOfMonth());
         click(By.xpath(locator));
         //***********************************************************************************************
 
@@ -129,7 +144,7 @@ public class HelperSearch extends HelperBase {
         }//doklikali do nujnogo mesiaza
 
         clickByNextMonth(diffMonth);
-        locator = String.format("//div[text()=' %s ']",to.getDayOfMonth());
+        locator = String.format("//div[text()=' %s ']", to.getDayOfMonth());
 
         click(By.xpath(locator));
 
@@ -146,22 +161,22 @@ public class HelperSearch extends HelperBase {
         click(By.id("dates"));
 
 
-        int diffMonth = from.getYear()- now.getYear()
-                ==0 ? from.getMonthValue()-now.getMonthValue() :12- now.getMonthValue() +from.getMonthValue();
+        int diffMonth = from.getYear() - now.getYear()
+                == 0 ? from.getMonthValue() - now.getMonthValue() : 12 - now.getMonthValue() + from.getMonthValue();
 
         clickByNextMonth(diffMonth);
 
-        String locator = String.format("//div[text()=' %s ']",from.getDayOfMonth());
+        String locator = String.format("//div[text()=' %s ']", from.getDayOfMonth());
         click(By.xpath(locator));
         //***********************************************************************************************
 
 
-        diffMonth = to.getYear()-from.getYear()
-                ==0 ? to.getMonthValue()-from.getMonthValue() :  12-from.getMonthValue()+to.getMonthValue();
+        diffMonth = to.getYear() - from.getYear()
+                == 0 ? to.getMonthValue() - from.getMonthValue() : 12 - from.getMonthValue() + to.getMonthValue();
 
         clickByNextMonth(diffMonth);
 
-        locator = String.format("//div[text()=' %s ']",to.getDayOfMonth());
+        locator = String.format("//div[text()=' %s ']", to.getDayOfMonth());
         click(By.xpath(locator));
 
     }
@@ -176,11 +191,12 @@ public class HelperSearch extends HelperBase {
 
     public void searchPeriodInPast(String city, String dataFrom, String dataTo) {
         typeCity(city);
-        typePeriodInPast(dataFrom,dataTo);
+        typePeriodInPast(dataFrom, dataTo);
 
     }
 
     public boolean isPeriodInPast() {
+
         pause(1000);
         WebElement el = wd.findElement(By.xpath("//div[@class='ng-star-inserted']"));
         String error = el.getText();
@@ -188,10 +204,6 @@ public class HelperSearch extends HelperBase {
         return error.equals("You can't pick date before today");
     }
 
-    public void cklickSearch() {
-        click(By.id("0"));
-
-    }
 
     public void deleteFieldCity() {
         click(By.id("city"));
@@ -204,6 +216,10 @@ public class HelperSearch extends HelperBase {
 
         click(By.id("dates"));
         wd.findElement(By.id("dates")).clear();
+    }
+
+    public void returnToHomePage() {
+        click(By.id("0"));
     }
 }
 

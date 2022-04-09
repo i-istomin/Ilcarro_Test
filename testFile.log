@@ -1,0 +1,14 @@
+2373 [Test worker] INFO  manage.ApplicationManager - All tests start in ChromeDriver
+15598 [Test worker] INFO  tests.MainTests - Start test--->public void tests.Login.loginSuccessNew()
+20658 [Test worker] INFO  tests.MainTests - Start test 'loginSuccessNew' 
+20659 [Test worker] INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
+1950 [Test worker] INFO  manage.ApplicationManager - All tests start in ChromeDriver
+10069 [Test worker] INFO  tests.MainTests - Start test--->public void tests.Login.loginSuccessNew()
+15174 [Test worker] INFO  tests.MainTests - Start test 'loginSuccessNew' 
+15175 [Test worker] INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
+20210 [Test worker] INFO  tests.MainTests - Test 'loginSuccessNew' passed
+11:04:25.566 INFO  manage.ApplicationManager - All tests start in ChromeDriver
+11:04:32.656 INFO  tests.MainTests - Start test--->public void tests.Login.loginSuccessNew()
+11:04:37.731 INFO  tests.MainTests - Start test 'loginSuccessNew' 
+11:04:37.731 INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
+11:04:44.422 INFO  tests.MainTests - Test 'loginSuccessNew' passed

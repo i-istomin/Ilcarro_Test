@@ -1,0 +1,3 @@
+18:10:31.975 INFO  manage.ApplicationManager - All tests start in ChromeDriver
+18:10:38.570 INFO  tests.MainTests - Start test 'loginSuccessNew' 
+18:10:38.571 INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]

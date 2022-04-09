@@ -1,0 +1,5 @@
+11:22:07.614 INFO  manage.ApplicationManager - All tests start in ChromeDriver
+11:22:15.162 INFO  tests.MainTests - Start test--->public void tests.Login.loginSuccessNew()
+11:22:20.270 INFO  tests.MainTests - Start test 'loginSuccessNew' 
+11:22:20.271 INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
+11:22:26.287 INFO  tests.MainTests - Test 'loginSuccessNew' passed

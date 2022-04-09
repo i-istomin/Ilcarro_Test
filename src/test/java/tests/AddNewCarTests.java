@@ -13,6 +13,7 @@ public class AddNewCarTests extends MainTests {
     public void preCondition() {//if login button display, so make login
         if (!app.getUserHelper().isLogOutPresent()) {
             app.getUserHelper().login(new User().withEmail("missira85@gmail.com").withPassword("Irinka777$"));
+         //   logger.info("Test starts with user---> " User);
         }
     }
 
