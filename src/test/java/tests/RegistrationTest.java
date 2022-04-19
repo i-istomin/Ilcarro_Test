@@ -20,6 +20,9 @@ public class RegistrationTest extends MainTests {
         int index = (int) (System.currentTimeMillis() / 1000) % 3600;
         System.out.println(index); //==sout
 
+        logger.info("missmira1" + index + "@gmail.com");
+        logger.info("the index is--> "+index);
+
         app.getUserHelper().openRegistrationForm();//open regform
         app.getUserHelper().fillRegistrationForm("ira", "black1", "missmira1" + index + "@gmail.com", "Irinka555$");
         app.getUserHelper().checkPolicyXY();

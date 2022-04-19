@@ -1,0 +1,2 @@
+23:26:24.541 INFO  manage.ApplicationManager - All tests start in ChromeDriver
+23:26:26.163 INFO  tests.MainTests - Start test --->public void tests.Login.loginSuccessNew1()

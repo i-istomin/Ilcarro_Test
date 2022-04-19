@@ -12,8 +12,10 @@ public class AddNewCarTests extends MainTests {
     @BeforeMethod
     public void preCondition() {//if login button display, so make login
         if (!app.getUserHelper().isLogOutPresent()) {
-            app.getUserHelper().login(new User().withEmail("missira85@gmail.com").withPassword("Irinka777$"));
-         //   logger.info("Test starts with user---> " User);
+          //  app.getUserHelper().login(new User().withEmail("missira85@gmail.com").withPassword("Irinka777$"));
+            User user = new User().withEmail("missira85@gmail.com").withPassword("Irinka777$");
+            app.getUserHelper().login(user);
+            logger.info("Test start with user -->  " + user.toString());
         }
     }
 
@@ -21,6 +23,7 @@ public class AddNewCarTests extends MainTests {
     @Test
     public void addNewCarSuccess() {
         int index = (int) (System.currentTimeMillis() / 1000) % 3600;
+        logger.info(" 'Car Reg number' 100-22" +index);
 //bolshe ne sozdaem cherez slovo "NEW", a cherez builder
         Car car = Car.builder()//mejdu builder and buils zapisivaem polia
                 .address("Tel Aviv, Israel")
@@ -45,6 +48,7 @@ public class AddNewCarTests extends MainTests {
         app.getCar().openCarForm();
         app.getCar().fillCarForm(car);//peredali obyekt car ko-e sozdali reanee
         app.getCar().attachPhoto("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png");//daem ssilku na foto
+        logger.info("Attach photo --> /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png" );
         app.getCar().submit();
         Assert.assertTrue(app.getCar().isCarAdded());
 

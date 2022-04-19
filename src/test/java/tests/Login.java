@@ -70,7 +70,9 @@ public class Login extends MainTests {
         //5. assert if it is true or false contact when success pop up opened
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
         //6. pishem chto test proshel i ne upal
-        logger.info("Test 'loginSuccessNew' passed");
+        logger.info("Test 'loginSuccessNew' passed successfully");
+
+
     }
 
     @Test
@@ -98,6 +100,7 @@ public class Login extends MainTests {
     @AfterMethod
     public void postCondition() {
         app.getUserHelper().confirmLogin();
+
     }
 
 }

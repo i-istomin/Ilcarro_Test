@@ -95,7 +95,7 @@ public class HelperSearch extends HelperBase {
         click(By.cssSelector(".cdk-overlay-container"));
         type(By.id("dates"), dataFrom + " - " + dataTo); // type(By.id("dates"), "4/01/2022" + "-" + "4/20/2022");
         click(By.cssSelector(".cdk-overlay-container"));
-
+        takeScreenShot("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/src/test/screenshots");
 
     }
 
