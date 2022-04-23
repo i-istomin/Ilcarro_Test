@@ -1,8 +1,7 @@
-package manage;
+package manager;
 
-import models.Car;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,14 +9,15 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-    WebDriver wd;
+
+    EventFiringWebDriver wd;// WebDriver wd; vmesto webdriver nujen eventfiring chtobi rabotat s listener
     UserHelper userHelper;
     CarHelper car;
     HelperSearch search;
     Logger logger= LoggerFactory.getLogger(ApplicationManager.class);//pechataet v file "logback.xml"
 
     public void init() {
-        wd = new ChromeDriver();
+        wd = new EventFiringWebDriver(new ChromeDriver());//vnutri utochniaem kakoy browser mi otkrivaem
         logger.info("All tests start in ChromeDriver");
         System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver");
         wd.manage().window().maximize();
@@ -28,6 +28,7 @@ public class ApplicationManager {
         car=new CarHelper(wd);
         search=new HelperSearch(wd);
 
+        wd.register(new MyListener());//listener budet vse slishat, no otslejivat budet tolko 3 metoda kot-e ukazali v "Mylistener"
     }
 
     public void stop() {

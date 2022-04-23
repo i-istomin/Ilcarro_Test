@@ -1,0 +1,23 @@
+11:56:03.421 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+11:56:04.864 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+11:56:09.885 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+11:56:09.888 INFO  tests.MainTests - start testloginSuccessNew
+11:56:09.890 INFO  tests.MainTests - Start test 'loginSuccessNew' 
+11:56:09.891 INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
+11:56:09.891 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+11:56:09.915 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+11:56:10.002 INFO  manager.MyListener - 'Start find' element--->By.xpath: //inpu[@id='email']
+11:56:15.089 INFO  manager.MyListener - We have a 'throwable' ---> no such element: Unable to locate element: {"method":"xpath","selector":"//inpu[@id='email']"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1031-oem', java.version: '11.0.14.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /tmp/.com.google.Chrome.fbHpBF}, goog:chromeOptions: {debuggerAddress: localhost:44619}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12727360762459c90f9cd56cc89d7ffe
+*** Element info: {Using=xpath, value=//inpu[@id='email']}
+11:56:15.092 INFO  manager.MyListener - We have a 'throwable' ---> [Ljava.lang.StackTraceElement;@36db1f67
+11:56:15.679 INFO  manager.MyListener - This is the link to screen with problem-->src/test/screenshots/screen-3375.png
+11:56:15.681 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+11:56:20.699 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+11:56:20.700 INFO  tests.MainTests - End of testloginSuccessNew

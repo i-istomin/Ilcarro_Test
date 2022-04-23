@@ -1,4 +1,4 @@
-package manage;
+package manager;
 
 import models.User;
 import org.openqa.selenium.By;

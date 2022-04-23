@@ -1,11 +1,14 @@
 package tests;
 
 
+import manager.MyDataProvider;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 public class Login extends MainTests {
 
@@ -44,7 +47,7 @@ public class Login extends MainTests {
  //   }
 
     @BeforeMethod
-    public void precondition() { //is login?->log out
+    public void precondition(Method m) { //is login?->log out
         if (app.getUserHelper().isLogOutPresent()){
             app.getUserHelper().logout();
             logger.info("Test needs logout");
@@ -52,17 +55,22 @@ public class Login extends MainTests {
         }
     }
 
+    @BeforeMethod
+    public void startLogger(Method m){
+        logger.info("start test"+ m.getName());
+    }
 
-    @Test
-    public void loginSuccessNew() {
+
+    @Test(dataProvider = "validLoginData",dataProviderClass = MyDataProvider.class)//v Test dobavili nazvanie klassa
+    public void loginSuccessNew(String email, String password) {
 
         // 0. otslejivaem s kakoy datou ya loginus
         logger.info("Start test 'loginSuccessNew' ");
-        logger.info("The test starts with data [missira85@gmail.com] & [Irinka777$]");
+        logger.info("The test starts with email"+ email+ "and password " +password);//[missira85@gmail.com] & [Irinka777$] meniaem na email & password
         // 1. click the  login regist form
         app.getUserHelper().openLoginForm();
         //2. fill email +type the #password
-        app.getUserHelper().fillLoginForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
+        app.getUserHelper().fillLoginForm(email, password);//("missira85@gmail.com", "Irinka777$") meniaem na email & password
         //3.click button yalla:
         app.getUserHelper().submit();
         //4 make pause before
@@ -72,17 +80,19 @@ public class Login extends MainTests {
         //6. pishem chto test proshel i ne upal
         logger.info("Test 'loginSuccessNew' passed successfully");
 
+     //   takeScreenShot("/home/i-istomin/TelRan/SYSTEMS/PhoneBook/src/test/screenshotS/screen.png");
 
     }
 
     @Test
     public void loginSuccessNew1() {
-
+        logger.info("Testing 'loginSuccessNew1' ");
         app.getUserHelper().openLoginForm();
         app.getUserHelper().fillLoginForm("missira85@gmail.com", "Irinka777$");//doljni bit dannye kot-e nujno vpisat v form
         app.getUserHelper().submit();
         app.getUserHelper().pause(1000);
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
+        logger.info("Test 'loginSuccessNew1' passed successfully");
     }
 
     @Test
@@ -98,8 +108,9 @@ public class Login extends MainTests {
     }
 
     @AfterMethod
-    public void postCondition() {
+    public void postCondition(Method m) {
         app.getUserHelper().confirmLogin();
+        logger.info("End of test"+m.getName());
 
     }
 

@@ -1,6 +1,0 @@
-15:39:35.091 INFO  manage.ApplicationManager - All tests start in ChromeDriver
-15:39:43.425 INFO  tests.MainTests - Test needs logout
-15:39:43.426 INFO  tests.MainTests - Start test 'loginSuccessNew' 
-15:39:43.426 INFO  tests.MainTests - The test starts with data [missira85@gmail.com] & [Irinka777$]
-15:39:44.931 INFO  tests.MainTests - Test 'loginSuccessNew' passed
-15:39:45.122 INFO  tests.MainTests - Test needs logout
