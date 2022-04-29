@@ -107,6 +107,25 @@ public class Login extends MainTests {
         Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
     }
 
+    @Test(dataProvider="validModelLogin", dataProviderClass = MyDataProvider.class)
+    public void loginModelDataProvider(User user) {
+
+        app.getUserHelper().openLoginForm();
+        app.getUserHelper().fillLoginForm(user);//vpisivaem suda user. no metod rugaetsia.
+        app.getUserHelper().submit();
+        app.getUserHelper().pause(1000);
+       Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
+    }
+
+    @Test(dataProvider="validModelCSV", dataProviderClass = MyDataProvider.class)
+    public void loginModelCSVDataProvider(User user) {
+        app.getUserHelper().openLoginForm();
+        app.getUserHelper().fillLoginForm(user);//vpisivaem suda user. no metod rugaetsia.
+        app.getUserHelper().submit();
+        app.getUserHelper().pause(1000);
+       Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
+    }
+
     @AfterMethod
     public void postCondition(Method m) {
         app.getUserHelper().confirmLogin();

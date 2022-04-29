@@ -1,6 +1,0 @@
-13:23:22.168 INFO  manager.TestNGMyListener - onStart(ISuite suite)
-13:23:22.173 INFO  manager.TestNGMyListener - onStartGradle test
-13:23:22.192 INFO  manager.TestNGMyListener - onTestStart
-13:23:24.010 INFO  manager.TestNGMyListener - onTestSuccessnull
-13:23:24.013 INFO  manager.TestNGMyListener - onFinish
-13:23:24.015 INFO  manager.TestNGMyListener - onFinish(ISuite suite)

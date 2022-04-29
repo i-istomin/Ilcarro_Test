@@ -1,0 +1,98 @@
+22:53:51.140 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+22:53:52.868 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+22:53:57.917 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+22:53:57.920 INFO  tests.MainTests - start testloginModelDataProvider
+22:53:57.941 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+22:53:57.965 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+22:53:58.054 INFO  manager.MyListener - 'Start find' element--->By.id: email
+22:53:58.078 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+22:53:58.306 INFO  manager.MyListener - 'Start find' element--->By.id: password
+22:53:58.323 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+22:53:58.521 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:53:58.545 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:53:58.622 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:53:58.637 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:53:59.708 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container
+22:53:59.732 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container<----was found
+22:53:59.768 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container h2
+22:53:59.787 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container h2<----was found
+22:53:59.811 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:53:59.826 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:53:59.826 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:53:59.841 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:53:59.886 INFO  tests.MainTests - End of testloginModelDataProvider
+22:53:59.889 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+22:53:59.906 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+22:53:59.906 INFO  manager.MyListener - 'Start find' element--->By.xpath: //*[text()=' Logout ']
+22:53:59.927 INFO  manager.MyListener - The element with locator --->By.xpath: //*[text()=' Logout ']<----was found
+22:54:00.051 INFO  tests.MainTests - Test needs logout
+22:54:00.054 INFO  tests.MainTests - start testloginModelDataProvider
+22:54:00.056 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+22:54:00.070 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+22:54:00.156 INFO  manager.MyListener - 'Start find' element--->By.id: email
+22:54:00.171 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+22:54:00.355 INFO  manager.MyListener - 'Start find' element--->By.id: password
+22:54:00.369 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+22:54:00.543 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:00.558 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:00.608 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:00.623 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:01.696 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container
+22:54:01.714 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container<----was found
+22:54:01.744 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container h2
+22:54:01.757 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container h2<----was found
+22:54:01.782 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:01.795 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:01.796 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:01.808 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:01.862 INFO  tests.MainTests - End of testloginModelDataProvider
+22:54:01.864 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+22:54:01.879 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+22:54:01.879 INFO  manager.MyListener - 'Start find' element--->By.xpath: //*[text()=' Logout ']
+22:54:01.894 INFO  manager.MyListener - The element with locator --->By.xpath: //*[text()=' Logout ']<----was found
+22:54:02.015 INFO  tests.MainTests - Test needs logout
+22:54:02.018 INFO  tests.MainTests - start testloginModelDataProvider
+22:54:02.019 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+22:54:02.036 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+22:54:02.109 INFO  manager.MyListener - 'Start find' element--->By.id: email
+22:54:02.123 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+22:54:02.323 INFO  manager.MyListener - 'Start find' element--->By.id: password
+22:54:02.336 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+22:54:02.496 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:02.508 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:02.554 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:02.570 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:03.646 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container
+22:54:03.662 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container<----was found
+22:54:03.701 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container h2
+22:54:03.714 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container h2<----was found
+22:54:03.734 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:03.746 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:03.746 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:03.759 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:03.818 INFO  tests.MainTests - End of testloginModelDataProvider
+22:54:03.821 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+22:54:03.841 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+22:54:03.841 INFO  manager.MyListener - 'Start find' element--->By.xpath: //*[text()=' Logout ']
+22:54:03.856 INFO  manager.MyListener - The element with locator --->By.xpath: //*[text()=' Logout ']<----was found
+22:54:03.977 INFO  tests.MainTests - Test needs logout
+22:54:03.980 INFO  tests.MainTests - start testloginModelDataProvider
+22:54:03.982 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+22:54:03.998 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+22:54:04.081 INFO  manager.MyListener - 'Start find' element--->By.id: email
+22:54:04.099 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+22:54:04.315 INFO  manager.MyListener - 'Start find' element--->By.id: password
+22:54:04.336 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+22:54:04.511 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:04.524 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:04.613 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+22:54:04.629 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+22:54:05.710 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container
+22:54:05.727 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container<----was found
+22:54:05.752 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container h2
+22:54:05.765 INFO  manager.MyListener - The element with locator --->By.cssSelector: .dialog-container h2<----was found
+22:54:05.787 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:05.799 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:05.800 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+22:54:05.813 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+22:54:05.863 INFO  tests.MainTests - End of testloginModelDataProvider

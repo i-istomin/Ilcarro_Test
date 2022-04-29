@@ -1,5 +1,0 @@
-22:20:22.882 INFO  manager.ApplicationManager - All tests start in ChromeDriver
-22:20:24.546 INFO  tests.MainTests - Start test --->public void tests.AddNewCarTests.addNewCarSuccess()
-22:20:35.256 INFO  tests.MainTests - Test start with user -->  User{email='missira85@gmail.com', password='Irinka777$', name='null', lastNAme='null', phone='null'}
-22:20:35.262 INFO  tests.MainTests -  'Car Reg number' 100-221235
-22:20:40.282 INFO  tests.MainTests - Attach photo --> /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png
