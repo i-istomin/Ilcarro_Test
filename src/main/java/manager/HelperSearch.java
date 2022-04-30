@@ -22,7 +22,7 @@ public class HelperSearch extends HelperBase {
 
     private void typeCity(String city) {
 
-        type(By.id("city"), city);//pechataem slovo v inpute
+        type(By.id("city"),city);//pechataem slovo v inpute
         pause(500);
         click(By.cssSelector(".pac-item"));//otkrivaetsia dropdown
         pause(500);
@@ -105,6 +105,7 @@ public class HelperSearch extends HelperBase {
     }
 
     public void searchAnyPeriod(String city, String dataFrom, String dataTo) {
+        click(By.id("city"));
         typeCity(city);
         selectPeriodAnyData(dataFrom, dataTo);
     }
@@ -219,7 +220,9 @@ public class HelperSearch extends HelperBase {
     }
 
     public void returnToHomePage() {
+        pause(2000);
         click(By.id("0"));
+        click(By.cssSelector(".header a[href='/']"));
     }
 }
 

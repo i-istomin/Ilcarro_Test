@@ -6,12 +6,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
+
 public class RegistrationTest extends MainTests {
 
-    @BeforeMethod
-    public void preCondition() {
+    @BeforeMethod(alwaysRun = true)
+    public void preCondition(Method m) {
         if (app.getUserHelper().isLogOutPresent()) {
             app.getUserHelper().logout();
+            logger.info(("Start test" + m.getName()));
         }
     }
 
@@ -32,7 +35,7 @@ public class RegistrationTest extends MainTests {
 
     }
 
-    @Test
+    @Test(groups = {"web"})
     public void registrationSuccessModel() {
 
         int index = (int) (System.currentTimeMillis() / 1000) % 3600;
@@ -67,7 +70,7 @@ public class RegistrationTest extends MainTests {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postConditions() {
         app.getUserHelper().confirmLogin();
     }

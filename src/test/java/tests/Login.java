@@ -46,16 +46,17 @@ public class Login extends MainTests {
 //        Assert.assertTrue(wd.findElements(By.xpath("//*[text()=' Logout ']")).size() > 0);
  //   }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void precondition(Method m) { //is login?->log out
         if (app.getUserHelper().isLogOutPresent()){
             app.getUserHelper().logout();
             logger.info("Test needs logout");
+            logger.info(("Start test" + m.getName()));
 
         }
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void startLogger(Method m){
         logger.info("start test"+ m.getName());
     }
@@ -95,7 +96,7 @@ public class Login extends MainTests {
         logger.info("Test 'loginSuccessNew1' passed successfully");
     }
 
-    @Test
+    @Test(groups = {"web"})
     public void loginSuccessModel() {
         User user=new User().withEmail("missira85@gmail.com").withPassword("Irinka777$");
 
@@ -126,7 +127,7 @@ public class Login extends MainTests {
        Assert.assertEquals(app.getUserHelper().checkMessage(), "Logged in success");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition(Method m) {
         app.getUserHelper().confirmLogin();
         logger.info("End of test"+m.getName());

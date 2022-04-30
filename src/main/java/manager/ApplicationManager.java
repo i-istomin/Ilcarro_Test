@@ -1,6 +1,8 @@
 package manager;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,11 +17,24 @@ public class ApplicationManager {
     CarHelper car;
     HelperSearch search;
     Logger logger= LoggerFactory.getLogger(ApplicationManager.class);//pechataet v file "logback.xml"
+    String broswer;//firefox
+
+    public ApplicationManager(String broswer) {
+        this.broswer = broswer;
+    }
 
     public void init() {
-        wd = new EventFiringWebDriver(new ChromeDriver());//vnutri utochniaem kakoy browser mi otkrivaem
-        logger.info("All tests start in ChromeDriver");
-        System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver");
+        if (broswer.equals(BrowserType.CHROME)) {
+
+            wd = new EventFiringWebDriver(new ChromeDriver());//vnutri utochniaem kakoy browser mi otkrivaem
+            logger.info("All tests start in ChromeDriver");
+            System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver");
+
+        } else if (broswer.equals(BrowserType.FIREFOX)) {
+            wd=new EventFiringWebDriver(new FirefoxDriver());
+            logger.info("All tests start in FirefoxDriver");
+        }
+
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.navigate().to("https://ilcarro.xyz/search");
@@ -32,7 +47,7 @@ public class ApplicationManager {
     }
 
     public void stop() {
-       // wd.quit();
+        wd.quit();
      //If there are one or more browser windows open, it will close all the open browser windows
 
         //************************************
