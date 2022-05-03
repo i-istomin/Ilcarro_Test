@@ -59,23 +59,23 @@ public class AddNewCarTests extends MainTests {
     }
 
 
-//    @Test(dataProvider="validDataCar", dataProviderClass = MyDataProvider.class)
-//    public void addNewCarSuccessProviderCSV(Car car) {
-//        int index = (int) (System.currentTimeMillis() / 1000) % 3600;
-//        logger.info(" 'Car Reg number' 100-22" +index);
-//
-//        car.setCarRegNumber("100-22-" + index);
-//
-//
-//        app.getCar().openCarForm();
-//        app.getCar().fillCarForm(car);//peredali obyekt car ko-e sozdali reanee
-//        app.getCar().attachPhoto("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png");//daem ssilku na foto
-//        logger.info("Attach photo --> /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png" );
-//        app.getCar().submit();
-//
-//        Assert.assertTrue(app.getCar().isCarAdded());
-//
-//
-//    }
+    @Test(dataProvider="validDataCar", dataProviderClass = MyDataProvider.class)
+    public void addNewCarSuccessProviderCSV(Car car) {
+        int index = (int) (System.currentTimeMillis() / 1000) % 3600;
+        logger.info(" 'Car Reg number' 100-22" +index);
+
+        car.setCarRegNumber("100-22-" + index);
+
+
+        app.getCar().openCarForm();
+        app.getCar().fillCarForm(car);//peredali obyekt car ko-e sozdali reanee
+        app.getCar().attachPhoto("/home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png");//daem ssilku na foto
+        logger.info("Attach photo --> /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png" );
+        app.getCar().submit();
+
+        Assert.assertTrue(app.getCar().isCarAdded());
+
+
+    }
 
 }

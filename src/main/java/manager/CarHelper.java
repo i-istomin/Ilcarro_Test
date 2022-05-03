@@ -57,6 +57,7 @@ pause(500);
 
     public void attachPhoto(String link) {
         wd.findElement(By.id("photos")).sendKeys(link);
+        pause(1000);
     }
 
 
@@ -64,8 +65,9 @@ pause(500);
         new WebDriverWait(wd,10)
                 .until(ExpectedConditions.visibilityOf(wd.findElement
                 (By.cssSelector("div.dialog-container"))));
-        String message=wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
-        click(By.xpath("//button[text()='Search cars']"));//najimaem na knopku chtobzakrit pop up
+
+       String message=wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
+         click(By.xpath("//button[text()='Search cars']"));//najimaem na knopku chtobzakrit pop up
         return message.equals("Car added");// proverka doljna vernut true
 
     }

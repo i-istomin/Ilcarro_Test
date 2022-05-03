@@ -1,0 +1,117 @@
+16:44:39.432 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+16:44:40.949 INFO  tests.MainTests - Start test --->addNewCarSuccessProviderCSV
+16:44:40.952 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+16:44:45.990 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+16:44:45.991 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+16:44:46.020 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+16:44:46.079 INFO  manager.MyListener - 'Start find' element--->By.id: email
+16:44:46.090 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+16:44:46.205 INFO  manager.MyListener - 'Start find' element--->By.id: password
+16:44:46.217 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+16:44:46.300 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+16:44:46.313 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+16:44:46.413 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+16:44:46.427 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+16:44:46.500 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+16:44:47.122 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+16:44:47.123 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+16:44:47.135 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+16:44:47.190 INFO  tests.MainTests - Test start with user -->  User{email='missira85@gmail.com', password='Irinka777$', name='null', lastNAme='null', phone='null'}
+16:44:47.221 INFO  tests.MainTests -  'Car Reg number' 100-222687
+16:44:48.221 INFO  manager.MyListener - 'Start find' element--->By.id: 1
+16:44:48.244 INFO  manager.MyListener - The element with locator --->By.id: 1<----was found
+16:44:48.333 INFO  manager.MyListener - 'Start find' element--->By.id: pickUpPlace
+16:44:48.347 INFO  manager.MyListener - The element with locator --->By.id: pickUpPlace<----was found
+16:44:48.543 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .pac-item
+16:44:48.870 INFO  manager.MyListener - The element with locator --->By.cssSelector: .pac-item<----was found
+16:44:49.436 INFO  manager.MyListener - 'Start find' element--->By.id: make
+16:44:49.459 INFO  manager.MyListener - The element with locator --->By.id: make<----was found
+16:44:49.608 INFO  manager.MyListener - 'Start find' element--->By.id: model
+16:44:49.624 INFO  manager.MyListener - The element with locator --->By.id: model<----was found
+16:44:49.751 INFO  manager.MyListener - 'Start find' element--->By.id: year
+16:44:49.766 INFO  manager.MyListener - The element with locator --->By.id: year<----was found
+16:44:49.901 INFO  manager.MyListener - 'Start find' element--->By.id: engine
+16:44:49.915 INFO  manager.MyListener - The element with locator --->By.id: engine<----was found
+16:44:50.074 INFO  manager.MyListener - 'Start find' element--->By.id: fuel
+16:44:50.095 INFO  manager.MyListener - The element with locator --->By.id: fuel<----was found
+16:44:50.120 INFO  manager.MyListener - 'Start find' element--->By.xpath: .//option[@value = "Gas"]
+16:44:50.143 INFO  manager.MyListener - The element with locator --->By.xpath: .//option[@value = "Gas"]<----was found
+16:44:50.200 INFO  manager.MyListener - 'Start find' element--->By.id: gear
+16:44:50.220 INFO  manager.MyListener - The element with locator --->By.id: gear<----was found
+16:44:50.241 INFO  manager.MyListener - 'Start find' element--->By.xpath: .//option[@value = "SMT"]
+16:44:50.258 INFO  manager.MyListener - The element with locator --->By.xpath: .//option[@value = "SMT"]<----was found
+16:44:50.314 INFO  manager.MyListener - 'Start find' element--->By.id: wheelsDrive
+16:44:50.335 INFO  manager.MyListener - The element with locator --->By.id: wheelsDrive<----was found
+16:44:50.360 INFO  manager.MyListener - 'Start find' element--->By.xpath: .//option[@value = "RWD"]
+16:44:50.385 INFO  manager.MyListener - The element with locator --->By.xpath: .//option[@value = "RWD"]<----was found
+16:44:50.423 INFO  manager.MyListener - 'Start find' element--->By.id: doors
+16:44:50.434 INFO  manager.MyListener - The element with locator --->By.id: doors<----was found
+16:44:50.587 INFO  manager.MyListener - 'Start find' element--->By.id: seats
+16:44:50.613 INFO  manager.MyListener - The element with locator --->By.id: seats<----was found
+16:44:50.745 INFO  manager.MyListener - 'Start find' element--->By.id: class
+16:44:50.766 INFO  manager.MyListener - The element with locator --->By.id: class<----was found
+16:44:50.921 INFO  manager.MyListener - 'Start find' element--->By.id: fuelConsumption
+16:44:50.934 INFO  manager.MyListener - The element with locator --->By.id: fuelConsumption<----was found
+16:44:51.096 INFO  manager.MyListener - 'Start find' element--->By.id: serialNumber
+16:44:51.117 INFO  manager.MyListener - The element with locator --->By.id: serialNumber<----was found
+16:44:51.303 INFO  manager.MyListener - 'Start find' element--->By.id: price
+16:44:51.315 INFO  manager.MyListener - The element with locator --->By.id: price<----was found
+16:44:51.510 INFO  manager.MyListener - 'Start find' element--->By.id: distance
+16:44:51.534 INFO  manager.MyListener - The element with locator --->By.id: distance<----was found
+16:44:51.720 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .feature-input
+16:44:51.744 INFO  manager.MyListener - The element with locator --->By.cssSelector: .feature-input<----was found
+16:44:51.976 INFO  manager.MyListener - 'Start find' element--->By.id: about
+16:44:51.997 INFO  manager.MyListener - The element with locator --->By.id: about<----was found
+16:44:52.110 INFO  manager.MyListener - 'Start find' element--->By.id: photos
+16:44:52.123 INFO  manager.MyListener - The element with locator --->By.id: photos<----was found
+16:44:52.207 INFO  tests.MainTests - Attach photo --> /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/orange-car.png
+16:44:52.208 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+16:44:52.221 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+16:44:53.889 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+16:44:53.901 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+16:44:53.962 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: div.dialog-container
+16:44:54.999 INFO  manager.MyListener - The element with locator --->By.cssSelector: div.dialog-container<----was found
+16:44:55.025 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: div.dialog-container h1
+16:44:55.044 INFO  manager.MyListener - The element with locator --->By.cssSelector: div.dialog-container h1<----was found
+16:44:55.068 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Search cars']
+16:45:00.137 INFO  manager.MyListener - We have a 'throwable' ---> no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Search cars']"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1033-oem', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /tmp/.com.google.Chrome.8sY52Z}, goog:chromeOptions: {debuggerAddress: localhost:36497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86ea62d736312c52c46e99ce691001fd
+*** Element info: {Using=xpath, value=//button[text()='Search cars']}
+16:45:00.140 INFO  manager.MyListener - We have a 'throwable' ---> [Ljava.lang.StackTraceElement;@13247acc
+16:45:00.337 INFO  manager.MyListener - This is the link to screen with problem-->src/test/screenshots/screen-2700.png
+16:45:00.339 INFO  tests.MainTests - Start test --->addNewCarSuccessProviderCSV
+16:45:00.340 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+16:45:00.352 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+16:45:00.353 INFO  tests.MainTests -  'Car Reg number' 100-222700
+16:45:01.353 INFO  manager.MyListener - 'Start find' element--->By.id: 1
+16:45:01.368 INFO  manager.MyListener - The element with locator --->By.id: 1<----was found
+16:45:06.422 INFO  manager.MyListener - We have a 'throwable' ---> element not interactable
+  (Session info: chrome=96.0.4664.110)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1033-oem', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /tmp/.com.google.Chrome.8sY52Z}, goog:chromeOptions: {debuggerAddress: localhost:36497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86ea62d736312c52c46e99ce691001fd
+16:45:06.423 INFO  manager.MyListener - We have a 'throwable' ---> [Ljava.lang.StackTraceElement;@1fcfc2ce
+16:45:06.631 INFO  manager.MyListener - This is the link to screen with problem-->src/test/screenshots/screen-2706.png
+16:45:06.633 INFO  tests.MainTests - Start test --->addNewCarSuccessProviderCSV
+16:45:06.635 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+16:45:06.646 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+16:45:06.647 INFO  tests.MainTests -  'Car Reg number' 100-222706
+16:45:07.647 INFO  manager.MyListener - 'Start find' element--->By.id: 1
+16:45:07.663 INFO  manager.MyListener - The element with locator --->By.id: 1<----was found
+16:45:12.694 INFO  manager.MyListener - We have a 'throwable' ---> element not interactable
+  (Session info: chrome=96.0.4664.110)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1033-oem', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /tmp/.com.google.Chrome.8sY52Z}, goog:chromeOptions: {debuggerAddress: localhost:36497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86ea62d736312c52c46e99ce691001fd
+16:45:12.705 INFO  manager.MyListener - We have a 'throwable' ---> [Ljava.lang.StackTraceElement;@7e3e4f9a
+16:45:12.881 INFO  manager.MyListener - This is the link to screen with problem-->src/test/screenshots/screen-2712.png
