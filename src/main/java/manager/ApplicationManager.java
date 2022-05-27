@@ -1,6 +1,7 @@
 package manager;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -16,7 +17,7 @@ public class ApplicationManager {
     UserHelper userHelper;
     CarHelper car;
     HelperSearch search;
-    Logger logger= LoggerFactory.getLogger(ApplicationManager.class);//pechataet v file "logback.xml"
+    Logger logger = LoggerFactory.getLogger(ApplicationManager.class);//pechataet v file "logback.xml"
     String broswer;//firefox
 
     public ApplicationManager(String broswer) {
@@ -28,27 +29,39 @@ public class ApplicationManager {
 
             wd = new EventFiringWebDriver(new ChromeDriver());//vnutri utochniaem kakoy browser mi otkrivaem
             logger.info("All tests start in ChromeDriver");
-            System.setProperty("webdriver.chrome.driver", "/home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver");
+            System.setProperty("webdriver.chrome.driver", " /home/i-istomin/TelRan/SYSTEMS/Ilcarro_Test/chromedriver");///home/i-istomin/TelRan/SYSTEMS/ilcaro_project/chromedriver"
+
 
         } else if (broswer.equals(BrowserType.FIREFOX)) {
-            wd=new EventFiringWebDriver(new FirefoxDriver());
+            wd = new EventFiringWebDriver(new FirefoxDriver());
             logger.info("All tests start in FirefoxDriver");
         }
 
+
+// ******************************
+// gighmmpiobklfepjocnamgkkbiglidom
+        ///home/i-istomin/.config/google-chrome/Default/Extensions
+//        ChromeOptions options=new ChromeOptions();
+//        options.addArguments("load-extension=/home/i-istomin/Tools/4.46.1_0");
+ //wd=new ChromeDriver(options);
+        //**********************************
+
+
+        wd.navigate().to("https://ilcarro.xyz/search");
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wd.navigate().to("https://ilcarro.xyz/search");
 
-        userHelper=new UserHelper(wd);
-        car=new CarHelper(wd);
-        search=new HelperSearch(wd);
+
+        userHelper = new UserHelper(wd);
+        car = new CarHelper(wd);
+        search = new HelperSearch(wd);
 
         wd.register(new MyListener());//listener budet vse slishat, no otslejivat budet tolko 3 metoda kot-e ukazali v "Mylistener"
     }
 
     public void stop() {
         wd.quit();
-     //If there are one or more browser windows open, it will close all the open browser windows
+        //If there are one or more browser windows open, it will close all the open browser windows
 
         //************************************
         //Explanation use case quit(): You should use driver.quit whenever you want to end the program.

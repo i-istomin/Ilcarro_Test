@@ -1,0 +1,31 @@
+21:45:40.844 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+21:45:42.359 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+21:45:47.384 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+21:45:47.388 INFO  tests.MainTests - start testloginSuccessModel
+21:45:47.391 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Log in ']
+21:45:47.418 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Log in ']<----was found
+21:45:47.508 INFO  manager.MyListener - 'Start find' element--->By.id: email
+21:45:47.531 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+21:45:47.687 INFO  manager.MyListener - 'Start find' element--->By.id: password
+21:45:47.698 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+21:45:47.853 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+21:45:47.867 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+21:45:47.964 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+21:45:47.979 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+21:45:49.042 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: .dialog-container
+21:45:54.108 INFO  manager.MyListener - We have a 'throwable' ---> no such element: Unable to locate element: {"method":"css selector","selector":".dialog-container"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'desktopirina', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.0-1034-oem', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.1BmL1T}, goog:chromeOptions: {debuggerAddress: localhost:39993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cc20409489900a8d90c2d26fbab076b6
+*** Element info: {Using=css selector, value=.dialog-container}
+21:45:54.111 INFO  manager.MyListener - We have a 'throwable' ---> [Ljava.lang.StackTraceElement;@5433e66f
+21:45:54.691 INFO  manager.MyListener - This is the link to screen with problem-->src/test/screenshots/screen-2754.png
+21:45:54.693 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+21:45:58.939 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+21:45:58.939 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+21:45:58.961 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found
+21:45:59.009 INFO  tests.MainTests - End of testloginSuccessModel

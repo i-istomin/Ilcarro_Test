@@ -1,0 +1,26 @@
+21:47:35.999 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+21:47:37.367 INFO  tests.MainTests - Start test --->registrationWrongPasswordModel
+21:47:37.371 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Logout ']
+21:47:42.431 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Logout ']<----was found
+21:47:42.439 INFO  manager.MyListener - 'Start find' element--->By.xpath: //a[text()=' Sign up ']
+21:47:42.464 INFO  manager.MyListener - The element with locator --->By.xpath: //a[text()=' Sign up ']<----was found
+21:47:42.525 INFO  manager.MyListener - 'Start find' element--->By.id: name
+21:47:42.537 INFO  manager.MyListener - The element with locator --->By.id: name<----was found
+21:47:42.657 INFO  manager.MyListener - 'Start find' element--->By.id: lastName
+21:47:42.680 INFO  manager.MyListener - The element with locator --->By.id: lastName<----was found
+21:47:42.789 INFO  manager.MyListener - 'Start find' element--->By.id: email
+21:47:42.802 INFO  manager.MyListener - The element with locator --->By.id: email<----was found
+21:47:42.948 INFO  manager.MyListener - 'Start find' element--->By.id: password
+21:47:42.961 INFO  manager.MyListener - The element with locator --->By.id: password<----was found
+21:47:43.074 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: label[for='terms-of-use']
+21:47:43.086 INFO  manager.MyListener - The element with locator --->By.cssSelector: label[for='terms-of-use']<----was found
+21:47:43.462 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: div.error div:first-child
+21:47:43.473 INFO  manager.MyListener - The element with locator --->By.cssSelector: div.error div:first-child<----was found
+21:47:43.502 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: div.error div:last-child
+21:47:43.523 INFO  manager.MyListener - The element with locator --->By.cssSelector: div.error div:last-child<----was found
+21:47:43.545 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: [type='submit']
+21:47:43.564 INFO  manager.MyListener - The element with locator --->By.cssSelector: [type='submit']<----was found
+21:47:43.578 INFO  manager.MyListener - 'Start find' element--->By.cssSelector: button[disabled]
+21:47:43.596 INFO  manager.MyListener - The element with locator --->By.cssSelector: button[disabled]<----was found
+21:47:43.600 INFO  manager.MyListener - 'Start find' element--->By.xpath: //button[text()='Ok']
+21:47:48.613 INFO  manager.MyListener - The element with locator --->By.xpath: //button[text()='Ok']<----was found

@@ -51,12 +51,12 @@ public class Login extends MainTests {
         if (app.getUserHelper().isLogOutPresent()){
             app.getUserHelper().logout();
             logger.info("Test needs logout");
-            logger.info(("Start test" + m.getName()));
 
         }
     }
 
     @BeforeMethod(alwaysRun = true)
+
     public void startLogger(Method m){
         logger.info("start test"+ m.getName());
     }
